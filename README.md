@@ -6,7 +6,7 @@ Kaichen Zhou, Yang Cao[†], Teawhan Kim[†], Hao Zhao, Hao Dong, Kai Ming Ting
 
 This repository provides the official PyTorch implementation code, data and models of the RAD.
 
-[[Link to paper]](https://arxiv.org/abs/2312.15268) [[Dataset with mask]](https://drive.google.com/file/d/1p3v2FeNlHinXFCTZzZujhYhCGUiOL38G/view?usp=drive_link) [[Dataset without mask]](https://drive.google.com/file/d/1cPeHh69vErvC3yZSejyxU4SNK9fVlJWL/view?usp=drive_link)
+[[Link to paper]](https://arxiv.org/pdf/2410.00713) [[Dataset with mask]](https://drive.google.com/file/d/1p3v2FeNlHinXFCTZzZujhYhCGUiOL38G/view?usp=drive_link) [[Dataset without mask]](https://drive.google.com/file/d/1cPeHh69vErvC3yZSejyxU4SNK9fVlJWL/view?usp=drive_link)
 
 Our paper has been submitted to "International Journal of Computer Vision". 
 
