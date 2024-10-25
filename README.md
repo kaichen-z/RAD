@@ -1,6 +1,6 @@
 # RAD: A Dataset and Benchmark for Real-Life Anomaly Detection with Robotic Observations
 
-Kaichen Zhou, Yang Cao[†], Teawhan Kim[†], Hao Zhao, Hao Dong, Kai Ming Ting, and Ye Zhu
+Kaichen Zhou, Yang Cao[†], Taewhan Kim[†], Hao Zhao, Hao Dong, Kai Ming Ting, and Ye Zhu
 
 [†] Equal Contribution
 
@@ -98,7 +98,7 @@ If you find our work useful or interesting, please cite our paper:
 ```latex
 @article{zhou2024rad,
   title={RAD: A Dataset and Benchmark for Real-Life Anomaly Detection with Robotic Observations},
-  author={Zhou, Kaichen and Cao, Yang and Kim, Teawhan and Zhao, Hao and Dong, Hao and Ting, Kai Ming and Zhu, Ye},
+  author={Zhou, Kaichen and Cao, Yang and Kim, Taewhan and Zhao, Hao and Dong, Hao and Ting, Kai Ming and Zhu, Ye},
   journal={arXiv preprint arXiv:2410.00713},
   year={2024}
 }
