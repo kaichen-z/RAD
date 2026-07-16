@@ -1,0 +1,34 @@
+# Local environments and caches
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# Editors and operating-system files
+.DS_Store
+.idea/
+.vscode/
+
+# Datasets, upstream checkouts, weights, and generated artifacts
+datasets/
+third_party/
+work/
+outputs/
+results/
+logs/
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+*.npy
+*.npz
+*.out
+*.log

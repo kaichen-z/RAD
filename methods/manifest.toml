@@ -1,0 +1,43 @@
+# Exact upstream revisions targeted by the public RAD adapters.
+
+[[method]]
+name = "Anomalib"
+paper_baselines = ["CFlow", "EfficientAD", "FastFlow", "PaDiM", "PatchCore", "Reverse Distillation", "STFPM", "UFlow", "WinCLIP"]
+url = "https://github.com/open-edge-platform/anomalib"
+revision = "2babe0e7902541d75f4f2a71b8769151f5e8a47c"
+license = "Apache-2.0"
+
+[[method]]
+name = "AdaCLIP"
+paper_baselines = ["AdaCLIP"]
+url = "https://github.com/caoyunkang/AdaCLIP"
+revision = "b762ac40c3f33c77e7e513e48cb436f059d456da"
+license = "MIT"
+
+[[method]]
+name = "VCP-CLIP"
+paper_baselines = ["VCP-CLIP"]
+url = "https://github.com/xiaozhen228/VCP-CLIP"
+revision = "f87a3f6dafe1641fd6b88130393032af3ac0cf65"
+license = "MIT"
+
+[[method]]
+name = "SplatPose"
+paper_baselines = ["SplatPose"]
+url = "https://github.com/m-kruse98/SplatPose"
+revision = "2c07b6dad268c6ee5c98549ba323acaaa0574916"
+license = "Gaussian-Splatting research license (see upstream)"
+
+[[method]]
+name = "PIAD"
+paper_baselines = ["PIAD"]
+url = "https://github.com/kaichen-yang/PIAD"
+revision = "d5ec45605d30267e9db54f50f85393f433713afb"
+license = "Method source unavailable; project-page repository only"
+
+[[method]]
+name = "VLM protocol"
+paper_baselines = ["Qwen2.5-VL", "GPT-4o"]
+url = "https://arxiv.org/abs/2410.00713"
+revision = "paper-v4"
+license = "Model-provider terms apply"

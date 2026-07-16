@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rad-benchmark"
+version = "2.0.0"
+description = "RAD dataset validation and benchmark adapters"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "RAD authors" }]
+dependencies = [
+  "numpy>=1.24,<3",
+  "Pillow>=10,<13",
+  "scikit-learn>=1.3,<2",
+]
+
+[project.optional-dependencies]
+anomalib = [
+  "anomalib @ git+https://github.com/open-edge-platform/anomalib.git@2babe0e7902541d75f4f2a71b8769151f5e8a47c",
+]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1"]
+
+[project.scripts]
+rad-benchmark = "rad_benchmark.cli:main"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rad_benchmark"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

@@ -1,0 +1,17 @@
+{
+  "protocol": "RAD public implementation of the paper's three-step VLM protocol",
+  "system": "You are inspecting one object image for visible physical defects. Do not infer a defect solely from pose, illumination, reflection, shadow, or background.",
+  "user": "Decide whether the object contains a visible anomaly. If anomalous, localize every visible anomalous region with a tight bounding box. Return only JSON that matches the schema. Coordinates must be normalized to [0, 1].",
+  "schema": {
+    "image": "path/relative/to/dataset/root.png",
+    "is_anomalous": true,
+    "defect_type": "missing | stained | scratched | squeezed | unknown | none",
+    "coordinate_space": "normalized",
+    "boxes": [
+      {
+        "bbox": [0.1, 0.2, 0.4, 0.5],
+        "confidence": 0.8
+      }
+    ]
+  }
+}

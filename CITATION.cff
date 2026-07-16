@@ -1,0 +1,61 @@
+cff-version: 1.2.0
+message: "If you use RAD, please cite the paper below."
+title: "RAD benchmark code"
+type: software
+version: 2.0.0
+license: MIT
+repository-code: "https://github.com/kaichen-z/RAD"
+url: "https://chang-xinhai.github.io/rad-website/"
+authors:
+  - given-names: Kaichen
+    family-names: Zhou
+  - given-names: Xinhai
+    family-names: Chang
+  - given-names: Taewhan
+    family-names: Kim
+  - given-names: Jiadong
+    family-names: Zhang
+  - given-names: Yang
+    family-names: Cao
+  - given-names: Chufei
+    family-names: Peng
+  - given-names: Fangneng
+    family-names: Zhan
+  - given-names: Hao
+    family-names: Zhao
+  - given-names: Hao
+    family-names: Dong
+  - given-names: Kai Ming
+    family-names: Ting
+  - given-names: Ye
+    family-names: Zhu
+preferred-citation:
+  type: article
+  title: "RAD: A Realistic Multi-View Benchmark for Pose-Agnostic Anomaly Detection"
+  authors:
+    - given-names: Kaichen
+      family-names: Zhou
+    - given-names: Xinhai
+      family-names: Chang
+    - given-names: Taewhan
+      family-names: Kim
+    - given-names: Jiadong
+      family-names: Zhang
+    - given-names: Yang
+      family-names: Cao
+    - given-names: Chufei
+      family-names: Peng
+    - given-names: Fangneng
+      family-names: Zhan
+    - given-names: Hao
+      family-names: Zhao
+    - given-names: Hao
+      family-names: Dong
+    - given-names: Kai Ming
+      family-names: Ting
+    - given-names: Ye
+      family-names: Zhu
+  year: 2024
+  journal: "arXiv preprint arXiv:2410.00713"
+  doi: "10.48550/arXiv.2410.00713"
+  url: "https://arxiv.org/abs/2410.00713"
