@@ -46,10 +46,31 @@ sensitive to reflection, symmetry, and sparse views.
 
 ## Dataset
 
-Hosted downloads:
+Hosted on Hugging Face: [`zhouk777/RAD`](https://huggingface.co/datasets/zhouk777/RAD)
 
-- [RAD with pixel masks](https://drive.google.com/file/d/1p3v2FeNlHinXFCTZzZujhYhCGUiOL38G/view)
-- [RAD without masks](https://drive.google.com/file/d/1cPeHh69vErvC3yZSejyxU4SNK9fVlJWL/view)
+| Split | File | Size |
+|---|---|---|
+| RAD with pixel masks | [`Anomaly_refine_msk.zip`](https://huggingface.co/datasets/zhouk777/RAD/blob/main/Anomaly_refine_msk.zip) | 201 MB |
+| RAD without masks | [`Anomaly_refine_nonmsk.zip`](https://huggingface.co/datasets/zhouk777/RAD/blob/main/Anomaly_refine_nonmsk.zip) | 5.85 GB |
+
+```bash
+pip install -U huggingface_hub
+
+# masked split (201 MB) — includes ground_truth/ pixel masks
+hf download zhouk777/RAD Anomaly_refine_msk.zip --repo-type dataset --local-dir .
+unzip Anomaly_refine_msk.zip
+
+# unmasked split (5.85 GB)
+hf download zhouk777/RAD Anomaly_refine_nonmsk.zip --repo-type dataset --local-dir .
+```
+
+Or from Python:
+
+```python
+from huggingface_hub import hf_hub_download
+
+path = hf_hub_download("zhouk777/RAD", "Anomaly_refine_msk.zip", repo_type="dataset")
+```
 
 The paper reports 13 semantic categories: binder clip, bowl, box, can, charger, cup 1, cup 2,
 glue bottle, phone case, rubber duck, spoon, spray bottle, and tennis ball. Multiple physical
@@ -75,7 +96,7 @@ rad-benchmark validate /path/to/RAD_with_mask
 rad-benchmark validate /path/to/RAD_with_mask --require-poses --output validation.json
 ```
 
-The hosted download links are retained from the earlier repository. The code license in this
+The archives extract to `Anomaly_refine_msk/` and `Anomaly_refine_nonmsk/`. The code license in this
 repository does not automatically grant rights to the dataset; consult the dataset distribution
 and authors for its applicable terms.
 
