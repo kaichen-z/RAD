@@ -7,10 +7,10 @@ license: MIT
 repository-code: "https://github.com/kaichen-z/RAD"
 url: "https://chang-xinhai.github.io/rad-website/"
 authors:
-  - given-names: Kaichen
-    family-names: Zhou
   - given-names: Xinhai
     family-names: Chang
+  - given-names: Kaichen
+    family-names: Zhou
   - given-names: Taewhan
     family-names: Kim
   - given-names: Jiadong
@@ -33,10 +33,10 @@ preferred-citation:
   type: article
   title: "RAD: A Realistic Multi-View Benchmark for Pose-Agnostic Anomaly Detection"
   authors:
-    - given-names: Kaichen
-      family-names: Zhou
     - given-names: Xinhai
       family-names: Chang
+    - given-names: Kaichen
+      family-names: Zhou
     - given-names: Taewhan
       family-names: Kim
     - given-names: Jiadong

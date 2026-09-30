@@ -2,7 +2,7 @@
 
 # RAD: A Realistic Multi-View Benchmark for Pose-Agnostic Anomaly Detection
 
-**Kaichen Zhou\*** · **Xinhai Chang\*** · **Taewhan Kim\*** · **Jiadong Zhang\*** · **Yang Cao** · **Chufei Peng** · **Fangneng Zhan** · **Hao Zhao** · **Hao Dong** · **Kai Ming Ting** · **Ye Zhu**
+**Xinhai Chang\*** · **Kaichen Zhou\*** · **Taewhan Kim\*** · **Jiadong Zhang\*** · **Yang Cao** · **Chufei Peng** · **Fangneng Zhan** · **Hao Zhao** · **Hao Dong** · **Kai Ming Ting** · **Ye Zhu**
 
 <sup>\* Equal contribution</sup>
 
@@ -199,7 +199,7 @@ implementations or weights.
 ```bibtex
 @misc{zhou2024rad,
   title         = {RAD: A Realistic Multi-View Benchmark for Pose-Agnostic Anomaly Detection},
-  author        = {Zhou, Kaichen and Chang, Xinhai and Kim, Taewhan and Zhang, Jiadong and Cao, Yang and Peng, Chufei and Zhan, Fangneng and Zhao, Hao and Dong, Hao and Ting, Kai Ming and Zhu, Ye},
+  author        = {Chang, Xinhai and Zhou, Kaichen and Kim, Taewhan and Zhang, Jiadong and Cao, Yang and Peng, Chufei and Zhan, Fangneng and Zhao, Hao and Dong, Hao and Ting, Kai Ming and Zhu, Ye},
   year          = {2024},
   eprint        = {2410.00713},
   archivePrefix = {arXiv},
