@@ -1,0 +1,405 @@
+{
+  "source": {
+    "dataset": "zhouk777/RAD",
+    "revision": "5eed55ab545461eb3173ab79e1a468cc0d0f8704",
+    "archive": "Anomaly_refine_msk.zip",
+    "published_archive_sha256": "ba00938286fd511c1c7cec78586435015fe637aa8de3198be583ceae2155fcee"
+  },
+  "totals": {
+    "train_normal": 1062,
+    "test_normal": 162,
+    "missing": 800,
+    "stained": 778,
+    "scratched": 633,
+    "squeezed": 612,
+    "normal": 1224,
+    "anomalous": 2823,
+    "images": 4047,
+    "masks": 2823,
+    "semantic_categories": 13,
+    "instances": 18
+  },
+  "pixel_coverage_definition": "For each anomalous image: 100 * count(mask > 0) / number of image pixels. Report the arithmetic mean over images for each semantic category and defect; pool all corresponding instance directories. Null means no samples.",
+  "categories": {
+    "binderclip": {
+      "train_normal": 118,
+      "test_normal": 18,
+      "missing": 68,
+      "stained": 68,
+      "scratched": 68,
+      "squeezed": 0,
+      "instances": 2,
+      "normal": 136,
+      "anomalous": 204,
+      "images": 340,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.0560516897756523,
+        "stained": 0.18983129638941676,
+        "scratched": 0.17937077894185505,
+        "squeezed": null
+      }
+    },
+    "bowl": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 68,
+      "scratched": 60,
+      "squeezed": 68,
+      "instances": 1,
+      "normal": 68,
+      "anomalous": 264,
+      "images": 332,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.296640431269708,
+        "stained": 0.17451574645184495,
+        "scratched": 0.3392274765410665,
+        "squeezed": 6.514840600420115
+      }
+    },
+    "box": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 45,
+      "stained": 68,
+      "scratched": 68,
+      "squeezed": 0,
+      "instances": 1,
+      "normal": 68,
+      "anomalous": 181,
+      "images": 249,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.2501689386996931,
+        "stained": 0.19867715610681563,
+        "scratched": 0.6771782886106846,
+        "squeezed": null
+      }
+    },
+    "can": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 41,
+      "stained": 68,
+      "scratched": 4,
+      "squeezed": 68,
+      "instances": 1,
+      "normal": 68,
+      "anomalous": 181,
+      "images": 249,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.11637897410784004,
+        "stained": 0.07000220617226457,
+        "scratched": 0.042704695152936525,
+        "squeezed": 2.189714446990471
+      }
+    },
+    "charger": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 66,
+      "stained": 66,
+      "scratched": 5,
+      "squeezed": 0,
+      "instances": 1,
+      "normal": 68,
+      "anomalous": 137,
+      "images": 205,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.12306960860426601,
+        "stained": 0.08672626083679455,
+        "scratched": 0.043231117810167696,
+        "squeezed": null
+      }
+    },
+    "cup1": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 66,
+      "scratched": 61,
+      "squeezed": 68,
+      "instances": 1,
+      "normal": 68,
+      "anomalous": 263,
+      "images": 331,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.1556975583657692,
+        "stained": 0.15397618557658566,
+        "scratched": 0.11770627450896824,
+        "squeezed": 3.246629583676777
+      }
+    },
+    "cup2": {
+      "train_normal": 177,
+      "test_normal": 27,
+      "missing": 68,
+      "stained": 29,
+      "scratched": 40,
+      "squeezed": 68,
+      "instances": 3,
+      "normal": 204,
+      "anomalous": 205,
+      "images": 409,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.16381508421466998,
+        "stained": 0.37323403443619185,
+        "scratched": 0.1429640388865194,
+        "squeezed": 6.257489120651082
+      }
+    },
+    "gluebottle": {
+      "train_normal": 118,
+      "test_normal": 18,
+      "missing": 53,
+      "stained": 21,
+      "scratched": 24,
+      "squeezed": 68,
+      "instances": 2,
+      "normal": 136,
+      "anomalous": 166,
+      "images": 302,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.02804817215289819,
+        "stained": 0.07780209690157036,
+        "scratched": 0.08564216222913852,
+        "squeezed": 1.684076953260303
+      }
+    },
+    "phonecase": {
+      "train_normal": 118,
+      "test_normal": 18,
+      "missing": 68,
+      "stained": 68,
+      "scratched": 68,
+      "squeezed": 68,
+      "instances": 2,
+      "normal": 136,
+      "anomalous": 272,
+      "images": 408,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.31393875562152096,
+        "stained": 0.23944647384346116,
+        "scratched": 0.22371541022386107,
+        "squeezed": 5.454533418580521
+      }
+    },
+    "rubberduck": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 60,
+      "scratched": 58,
+      "squeezed": 68,
+      "instances": 1,
+      "normal": 68,
+      "anomalous": 254,
+      "images": 322,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.6339143088819382,
+        "stained": 0.12909530864303637,
+        "scratched": 0.1473316613517489,
+        "squeezed": 5.295251067269801
+      }
+    },
+    "spoon": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 66,
+      "scratched": 51,
+      "squeezed": 68,
+      "instances": 1,
+      "normal": 68,
+      "anomalous": 253,
+      "images": 321,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.18773792897995908,
+        "stained": 0.1227880034103854,
+        "scratched": 0.15471854704144677,
+        "squeezed": 1.347954822698258
+      }
+    },
+    "spraybottle": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 52,
+      "stained": 62,
+      "scratched": 58,
+      "squeezed": 68,
+      "instances": 1,
+      "normal": 68,
+      "anomalous": 240,
+      "images": 308,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.4382675223748223,
+        "stained": 0.550191385306348,
+        "scratched": 0.3150663683382667,
+        "squeezed": 9.250230365209035
+      }
+    },
+    "tennisball": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 67,
+      "stained": 68,
+      "scratched": 68,
+      "squeezed": 0,
+      "instances": 1,
+      "normal": 68,
+      "anomalous": 203,
+      "images": 271,
+      "mean_anomalous_pixel_percent": {
+        "missing": 0.21594553310171488,
+        "stained": 0.32765860662810997,
+        "scratched": 0.7060667588612006,
+        "squeezed": null
+      }
+    }
+  },
+  "instances": {
+    "binderclip": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 0,
+      "scratched": 68,
+      "squeezed": 0
+    },
+    "binderclip2": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 0,
+      "stained": 68,
+      "scratched": 0,
+      "squeezed": 0
+    },
+    "bowl_upright": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 68,
+      "scratched": 60,
+      "squeezed": 68
+    },
+    "box": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 45,
+      "stained": 68,
+      "scratched": 68,
+      "squeezed": 0
+    },
+    "can": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 41,
+      "stained": 68,
+      "scratched": 4,
+      "squeezed": 68
+    },
+    "charger": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 66,
+      "stained": 66,
+      "scratched": 5,
+      "squeezed": 0
+    },
+    "cup1_upright": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 66,
+      "scratched": 61,
+      "squeezed": 68
+    },
+    "cup2_upright": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 0,
+      "scratched": 0,
+      "squeezed": 68
+    },
+    "cup2_upright2": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 0,
+      "stained": 29,
+      "scratched": 0,
+      "squeezed": 0
+    },
+    "cup2_upright3": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 0,
+      "stained": 0,
+      "scratched": 40,
+      "squeezed": 0
+    },
+    "gluebottle": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 53,
+      "stained": 0,
+      "scratched": 0,
+      "squeezed": 68
+    },
+    "gluebottle2": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 0,
+      "stained": 21,
+      "scratched": 24,
+      "squeezed": 0
+    },
+    "phonecase": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 0,
+      "scratched": 68,
+      "squeezed": 68
+    },
+    "phonecase2": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 0,
+      "stained": 68,
+      "scratched": 0,
+      "squeezed": 0
+    },
+    "rubberduck": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 60,
+      "scratched": 58,
+      "squeezed": 68
+    },
+    "spoon_upright": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 68,
+      "stained": 66,
+      "scratched": 51,
+      "squeezed": 68
+    },
+    "spraybottle2": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 52,
+      "stained": 62,
+      "scratched": 58,
+      "squeezed": 68
+    },
+    "tennisball": {
+      "train_normal": 59,
+      "test_normal": 9,
+      "missing": 67,
+      "stained": 68,
+      "scratched": 68,
+      "squeezed": 0
+    }
+  }
+}

@@ -18,11 +18,13 @@
 
 RAD is a robot-captured benchmark for anomaly detection under changing viewpoints, uncontrolled
 illumination, reflective materials, and viewpoint-dependent defect visibility. It contains
-**4,287 RGB images**, **13 semantic object categories** represented by **18 physical instances**,
+**4,047 RGB images**, **13 semantic object categories** represented by **18 physical instances**,
 and four defect types: scratched, missing, stained, and squeezed. Each object instance is
 captured from 68 predefined robot viewpoints with a Franka Emika Panda and Intel RealSense D415.
 
 ## News
+
+- **2026-10-16:** Corrected public-release counts and figures from the archives: 4,047 RGB images (1,224 normal and 2,823 anomalous). Added a sample manifest and reproducible statistics. See [release statistics](docs/DATASET.md).
 
 - **2026-07:** Public benchmark adapters, validation tools, and project page released.
 - **2024-10:** RAD first appeared on arXiv.
@@ -48,19 +50,19 @@ sensitive to reflection, symmetry, and sparse views.
 
 Hosted on Hugging Face: [`zhouk777/RAD`](https://huggingface.co/datasets/zhouk777/RAD)
 
-| Split | File | Size |
+| RGB variant (both include anomaly masks) | File | Size |
 |---|---|---|
-| RAD with pixel masks | [`Anomaly_refine_msk.zip`](https://huggingface.co/datasets/zhouk777/RAD/blob/main/Anomaly_refine_msk.zip) | 201 MB |
-| RAD without masks | [`Anomaly_refine_nonmsk.zip`](https://huggingface.co/datasets/zhouk777/RAD/blob/main/Anomaly_refine_nonmsk.zip) | 5.85 GB |
+| Background-masked RGB + ground-truth masks | [`Anomaly_refine_msk.zip`](https://huggingface.co/datasets/zhouk777/RAD/blob/main/Anomaly_refine_msk.zip) | 201 MiB |
+| Scene-background RGB + ground-truth masks | [`Anomaly_refine_nonmsk.zip`](https://huggingface.co/datasets/zhouk777/RAD/blob/main/Anomaly_refine_nonmsk.zip) | 5.85 GB |
 
 ```bash
 pip install -U huggingface_hub
 
-# masked split (201 MB) — includes ground_truth/ pixel masks
+# background-masked RGB (201 MiB), including ground_truth/ anomaly masks
 hf download zhouk777/RAD Anomaly_refine_msk.zip --repo-type dataset --local-dir .
 unzip Anomaly_refine_msk.zip
 
-# unmasked split (5.85 GB)
+# scene-background RGB (5.85 GB), also including ground_truth/ anomaly masks
 hf download zhouk777/RAD Anomaly_refine_nonmsk.zip --repo-type dataset --local-dir .
 ```
 
@@ -72,13 +74,19 @@ from huggingface_hub import hf_hub_download
 path = hf_hub_download("zhouk777/RAD", "Anomaly_refine_msk.zip", repo_type="dataset")
 ```
 
+The release contains **1,062 normal training**, **162 normal test**, and **2,823 anomalous test** RGB images. The anomalous images comprise **800 missing, 778 stained, 633 scratched, and 612 squeezed** samples. There are **2,823 separate ground-truth masks**, which are not additional RGB images. Both archives have the same sample paths; the RGB variants differ in background processing.
+
+See the [category/instance count tables](docs/DATASET.md), [sample manifest](docs/dataset_manifest.json), and [machine-readable statistics](docs/dataset_statistics.json). The figure below is regenerated from the released masks; pixel coverage uses full image area.
+
+![Archive-derived RAD image distribution and pixel-wise anomaly coverage](assets/dataset-statistics.png)
+
 The paper reports 13 semantic categories: binder clip, bowl, box, can, charger, cup 1, cup 2,
 glue bottle, phone case, rubber duck, spoon, spray bottle, and tennis ball. Multiple physical
 instances of binder clip, cup 2, glue bottle, and phone case are kept in separate directories and
 aggregated into their semantic category for reporting.
 
 ```text
-RAD_with_mask/
+Anomaly_refine_msk/
 ├── binderclip/
 │   ├── train/good/                 # normal training views
 │   ├── test/good/                  # normal test views
@@ -92,8 +100,8 @@ RAD_with_mask/
 After extracting an archive, validate paths, masks, counts, and optional pose metadata:
 
 ```bash
-rad-benchmark validate /path/to/RAD_with_mask
-rad-benchmark validate /path/to/RAD_with_mask --require-poses --output validation.json
+rad-benchmark validate /path/to/Anomaly_refine_msk
+rad-benchmark validate /path/to/Anomaly_refine_msk --require-poses --output validation.json
 ```
 
 The archives extract to `Anomaly_refine_msk/` and `Anomaly_refine_nonmsk/`. The code license in this
@@ -128,7 +136,7 @@ run; pinned revisions and license notes live in [`methods/manifest.toml`](method
 Generate portable metadata for CLIP methods:
 
 ```bash
-rad-benchmark metadata /path/to/RAD_with_mask work/rad-meta.json
+rad-benchmark metadata /path/to/Anomaly_refine_msk work/rad-meta.json
 python methods/adaclip/rad_dataset.py work/rad-meta.json --summary
 ```
 
@@ -136,14 +144,14 @@ Run one paper baseline through the direct Anomalib adapter:
 
 ```bash
 pip install -e '.[anomalib]'
-rad-benchmark anomalib /path/to/RAD_with_mask outputs/anomalib \
+rad-benchmark anomalib /path/to/Anomaly_refine_msk outputs/anomalib \
   --model patchcore --instances binderclip
 ```
 
 Convert provider-neutral VLM box responses into pixel masks:
 
 ```bash
-rad-benchmark vlm-masks responses.json /path/to/RAD_with_mask outputs/vlm-masks
+rad-benchmark vlm-masks responses.json /path/to/Anomaly_refine_msk outputs/vlm-masks
 ```
 
 See [`methods/README.md`](methods/README.md) for CLIP and 3D setup, pinned upstream revisions, and

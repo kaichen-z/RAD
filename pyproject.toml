@@ -17,6 +17,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+statistics = ["matplotlib>=3.7,<4"]
 anomalib = [
   "anomalib @ git+https://github.com/open-edge-platform/anomalib.git@2babe0e7902541d75f4f2a71b8769151f5e8a47c",
 ]
